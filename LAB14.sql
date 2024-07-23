@@ -23,6 +23,7 @@ SELECT email FROM customer;
 SELECT CONCAT(first_name,' ', last_name) AS 'Customer Full NAME', SUBSTRING(email,1,3) AS 'EMAIL' FROM customer ORDER BY last_name ASC;
 --1.1)
 SELECT COUNT(title), COUNT(release_year) AS 'Total fims released' FROM film;
+SELECT COUNT(*) AS 'num_films' FROM film;
 SELECT COUNT(title), rating FROM film GROUP BY rating;
 SELECT COUNT(title), rating FROM film GROUP BY rating ORDER BY COUNT(title) DESC;
 SELECT ROUND(AVG(length),2), rating FROM film GROUP BY rating ORDER BY ROUND(AVG(length),2) DESC;
